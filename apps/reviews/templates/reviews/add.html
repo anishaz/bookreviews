@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Book and Review</title>
+  </head>
+  <body>
+    <h1>Add a New Book Title and a Review:</h1>
+    <form action="/register" method="POST">
+      {% csrf_token %}
+      <fieldset>
+        <label for="title">Book Title:</label>
+        <input type="text" name="title">
+        <p>Choose from the list:</p>
+        <select name="author_list">
+          <option value="one">Author</option>
+          <option value="two">Author</option>
+          <option value="three">Author</option>
+          <option value="four">Author</option>
+        </select>
+        <br>
+        <label for="author">Or add a new author:</label>
+        <input type="text" name="author">
+        <br>
+        <label for="review">Review:</label>
+        <input type="textarea" name="review">
+        <p>Rating:</p>
+        <select name="rating">
+          <option value="oneStar">1</option>
+          <option value="twoStar">2</option>
+          <option value="threeStar">3</option>
+          <option value="fourStar">4</option>
+          <option value="fiveStar">5</option>
+        </select> stars
+        <br>
+        <button>Add Book and Review</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

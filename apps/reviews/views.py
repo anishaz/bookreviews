@@ -4,7 +4,7 @@ def index(request):
     return render(request, 'reviews/index.html')
 
 def add(request):
-     pass
+     return render(request, 'reviews/add.html')
 
 def show(request):
      pass
